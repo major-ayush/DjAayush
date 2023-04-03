@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/MyFavicon.ico" type="image/x-icon">  
+    <title>DJ-Aayushh</title>
+    
+    <style>
+        div:hover{
+            
+            transform: scale(1.1);
+        }
+        div{
+            border-radius: 5%;
+            border-color: black;
+            border-style: solid;
+            border-width: 3px;
+        }
+        
+    </style>
+</head>
+
+<body style = "background-color: brown;" id = "bodyId">
+
+    <h1 style = "color : black; text-align: center;" id = "heading" > DJ Aayush</h1>
+    <audio controls id = "song" style = "display: none;"> 
+    </audio>
+    <!-- style = "display: none;" -->
+    <div style = "height : 350px; width : 368px; background-color: red; display : inline-block; " id = "changingDiv1" >
+        
+    </div>
+    <div style = "height : 350px; width : 368px; background-color: blue; display : inline-block;" id = "changingDiv2" >
+
+    </div>
+    <div style = "height : 350px; width : 368px; background-color: green; display : inline-block;" id = "changingDiv3" >
+
+    </div>
+    <div style = "height : 350px; width : 368px; background-color: yellow; display : inline-block;" id = "changingDiv4" >
+
+    </div>
+    <div style = "height : 350px; width : 368px; background-color: red; display : inline-block;" id = "changingDiv5" >
+
+    </div>
+    <div style = "height : 350px; width : 368px; background-color: blue; display : inline-block;" id = "changingDiv6" >
+
+    </div>
+    <div style = "height : 350px; width : 368px; background-color: green; display : inline-block;" id = "changingDiv7" >
+
+    </div>
+    <div style = "height : 350px; width : 368px; background-color: yellow; display : inline-block;" id = "changingDiv8" >
+
+    </div>
+    <script>
+        
+        function generateRandomColor()
+        {
+            var color = "";
+            var possibleChars = "0123456789ABCDEF";
+            for(var i=1; i <= 6; i++)
+            {
+                var index = Math.random() * 16;
+                color += possibleChars.charAt(index);
+            }
+            return "#" + color;
+        }
+        
+        
+        
+       function changeColor()
+       {
+        var randomColor1 = generateRandomColor();
+        var randomColor2 = generateRandomColor();
+        var randomColor3 = generateRandomColor();
+        var randomColor4 = generateRandomColor();
+        
+        var str = "radial-gradient(" + randomColor1 + ", " + randomColor2 + "," + randomColor3 + ", " + randomColor4 + ")";
+        
+        document.getElementById("changingDiv1").style.backgroundImage = str;
+
+        randomColor1 = generateRandomColor();
+        randomColor2 = generateRandomColor();
+        randomColor3 = generateRandomColor();
+        randomColor4 = generateRandomColor();
+        
+        var str = "radial-gradient(" + randomColor1 + ", " + randomColor2 + "," + randomColor3 + ", " + randomColor4 + ")";
+        
+        document.getElementById("changingDiv2").style.backgroundImage = str;
+
+        randomColor1 = generateRandomColor();
+        randomColor2 = generateRandomColor();
+        randomColor3 = generateRandomColor();
+        randomColor4 = generateRandomColor();
+        
+        var str = "radial-gradient(" + randomColor1 + ", " + randomColor2 + "," + randomColor3 + ", " + randomColor4 + ")";
+        
+        document.getElementById("changingDiv3").style.backgroundImage = str;
+
+        randomColor1 = generateRandomColor();
+        randomColor2 = generateRandomColor();
+        randomColor3 = generateRandomColor();
+        randomColor4 = generateRandomColor();
+        
+        var str = "radial-gradient(" + randomColor1 + ", " + randomColor2 + "," + randomColor3 + ", " + randomColor4 + ")";
+        
+        document.getElementById("changingDiv4").style.backgroundImage = str;
+
+        randomColor1 = generateRandomColor();
+        randomColor2 = generateRandomColor();
+        randomColor3 = generateRandomColor();
+        randomColor4 = generateRandomColor();
+        
+        var str = "radial-gradient(" + randomColor1 + ", " + randomColor2 + "," + randomColor3 + ", " + randomColor4 + ")";
+        
+        document.getElementById("changingDiv5").style.backgroundImage = str;
+
+        randomColor1 = generateRandomColor();
+        randomColor2 = generateRandomColor();
+        randomColor3 = generateRandomColor();
+        randomColor4 = generateRandomColor();
+        
+        var str = "radial-gradient(" + randomColor1 + ", " + randomColor2 + "," + randomColor3 + ", " + randomColor4 + ")";
+        
+        document.getElementById("changingDiv6").style.backgroundImage = str;
+
+        randomColor1 = generateRandomColor();
+        randomColor2 = generateRandomColor();
+        randomColor3 = generateRandomColor();
+        randomColor4 = generateRandomColor();
+        
+        var str = "radial-gradient(" + randomColor1 + ", " + randomColor2 + "," + randomColor3 + ", " + randomColor4 + ")";
+        
+        document.getElementById("changingDiv7").style.backgroundImage = str;
+
+        randomColor1 = generateRandomColor();
+        randomColor2 = generateRandomColor();
+        randomColor3 = generateRandomColor();
+        randomColor4 = generateRandomColor();
+        
+        var str = "radial-gradient(" + randomColor1 + ", " + randomColor2 + "," + randomColor3 + ", " + randomColor4 + ")";
+        
+        document.getElementById("changingDiv8").style.backgroundImage = str;
+        //alert(randomColor1);
+        document.getElementById("heading").style.color = randomColor1;
+
+        randomColor1 = generateRandomColor();
+        randomColor2 = generateRandomColor();
+        randomColor3 = generateRandomColor();
+        randomColor4 = generateRandomColor();
+        
+        var str = "radial-gradient(" + randomColor1 + ", " + randomColor2 + "," + randomColor3 + ", " + randomColor4 + ")";
+        document.getElementById("bodyId").style.backgroundImage = str;
+
+       }
+       
+       
+       
+       //Audio integration
+       var audioElement = document.getElementById("song");
+       document.getElementById("changingDiv1").addEventListener("click", () => {
+        audioElement.setAttribute("src", "songs/ManaliTrance.mpeg");
+        audioElement.play();
+       })
+
+       document.getElementById("changingDiv2").addEventListener("click", () => {
+        audioElement.setAttribute("src", "songs/KisiDiscoMeJaayein.mpeg");
+        audioElement.play();
+       })
+
+       document.getElementById("changingDiv3").addEventListener("click", () => {
+        audioElement.setAttribute("src", "songs/PartyOnMyMind.mpeg");
+        audioElement.play();
+       })
+
+       document.getElementById("changingDiv4").addEventListener("click", () => {
+        audioElement.setAttribute("src", "songs/BreakUpParty.mpeg");
+        audioElement.play();
+       })
+
+       document.getElementById("changingDiv5").addEventListener("click", () => {
+        audioElement.setAttribute("src", "songs/LondonThumakda.mpeg");
+        audioElement.play();
+       })
+
+       document.getElementById("changingDiv6").addEventListener("click", () => {
+        audioElement.setAttribute("src", "songs/PatakhaGuddi.mpeg");
+        audioElement.play();
+       })
+
+       document.getElementById("changingDiv7").addEventListener("click", () => {
+        audioElement.setAttribute("src", "songs/SoorajDoobaHaiYaaron.mpeg");
+        audioElement.play();
+       })
+
+       document.getElementById("changingDiv8").addEventListener("click", () => {
+        audioElement.setAttribute("src", "songs/TammaTammaAgain.mpeg");
+        audioElement.play();
+       })
+       
+
+       // Spacebar integration
+
+       document.onkeydown = function(e)
+       {
+        if(e.keyCode == 32)
+        {
+            //alert("inside space");
+            if(audioElement.paused)
+            {
+                //alert("audio was paused");
+                audioElement.play();
+            }
+            else
+            {
+                //alert("audio was playing");
+                audioElement.pause();
+            }
+        }
+       }
+
+       var songs = ["songs/BreakUpParty.mpeg", "songs/ManaliTrance.mpeg","songs/TammaTammaAgain.mpeg", "songs/SoorajDoobaHaiYaaron.mpeg",
+       "songs/PatakhaGuddi.mpeg", "songs/LondonThumakda.mpeg", "songs/PartyOnMyMind.mpeg", "songs/KisiDiscoMeJaayein.mpeg"]
+       audioElement.onended = function()
+       {
+        var index = parseInt((Math.random() * 8));
+        audioElement.setAttribute("src", songs[index]);
+        audioElement.play();
+       }
+       setInterval(changeColor, 1);
+    </script>
+</body>
+</html>
